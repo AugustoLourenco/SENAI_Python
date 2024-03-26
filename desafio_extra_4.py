@@ -3,9 +3,7 @@
 base_retangulo = float(input("Digite o valor da base do retângulo: "))
 altura_retangulo = float(input("Digite o valor da altura do retângulo: "))
 
-soma_base = base_retangulo * 2
-soma_altura = altura_retangulo * 2
-perimetro_retangulo = soma_base + soma_altura
+perimetro_retangulo = (base_retangulo * 2) + (altura_retangulo * 2)
 
 area_retangulo = base_retangulo * altura_retangulo
 
