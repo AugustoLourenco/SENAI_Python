@@ -5,11 +5,12 @@
 # Até 24 anos: SÊNIOR
 # Acima: MASTER
 
-from datetime import date
+from datetime import *
 
 ano_nascimento = int(input("Digite o ano de nascimento: "))
-ano_atual = int(date.year)
-idade =  int(date.year) - ano_nascimento
+data_atual = date.today()
+ano_atual = data_atual.year
+idade =  ano_atual - ano_nascimento
 
 if idade > 24:
     print(f"MASTER. {idade} anos.")
