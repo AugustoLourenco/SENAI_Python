@@ -18,9 +18,9 @@ if soma_AB > reta_C and soma_AC > reta_B and soma_BC > reta_A:
     print("Foi possível formar o triângulo.")
     if reta_A == reta_B == reta_C:
         print(f"Os lados são: {reta_A}, {reta_B} e {reta_C}. Todos os lados são iguais. Triângulo Equilátero.")
-    elif reta_A == reta_B or reta_B == reta_C or reta_A == reta_C:
-        print(f"Os lados são: {reta_A}, {reta_B} e {reta_C}. Dois lados iguais. Triângulo Isósceles.")
-    else:
+    elif reta_A != reta_B != reta_C != reta_A:
         print(f"Os lados são: {reta_A}, {reta_B} e {reta_C}. Todos os lados diferentes. Triângulo Escaleno.")
+    else:
+        print(f"Os lados são: {reta_A}, {reta_B} e {reta_C}. Dois lados iguais. Triângulo Isósceles.")
 else:
     print("Não foi possível formar o triângulo.")
