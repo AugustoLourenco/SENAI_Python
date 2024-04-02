@@ -8,8 +8,8 @@
 from datetime import date
 
 ano_nascimento = int(input("Digite o ano de nascimento: "))
-ano_atual = int(date.year())
-idade =  int(date.year()) - ano_nascimento
+ano_atual = int(date.year)
+idade =  int(date.year) - ano_nascimento
 
 if idade > 24:
     print(f"MASTER. {idade} anos.")
