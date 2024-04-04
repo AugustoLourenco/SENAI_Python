@@ -32,3 +32,4 @@ while True:
         print("A opção está incorreta")
         continue 
     valor = valor + valor_ficha    
+print(f"Você tem que pagar R${valor + valor_ficha}")
