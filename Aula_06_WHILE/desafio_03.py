@@ -4,7 +4,8 @@
 numeros_digitados = 0
 soma = 0
 maior = 0
-menor = 1000000
+menor = 0
+# menor = 1000000
 
 while True:
     
@@ -15,15 +16,24 @@ while True:
     soma = soma + numero_usuario
     media = soma / numeros_digitados
     
-    if numero_usuario > maior:
-        maior = numero_usuario
-    else:
-        maior = maior
+    #if numero_usuario > maior:
+       # maior = numero_usuario
+    #else:
+       # maior = maior
         
-    if numero_usuario < menor:
+   # if numero_usuario < menor:
+       # menor = numero_usuario
+    #else:
+        #menor = menor
+        
+    if numeros_digitados == 1:
+        maior = numero_usuario
         menor = numero_usuario
     else:
-        menor = menor
+        if numero_usuario > maior:
+            maior = numero_usuario
+        if numero_usuario < menor:
+            menor = numero_usuario
         
     if continuar == "N":
         print("Saindo do loop")
