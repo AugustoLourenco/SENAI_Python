@@ -7,8 +7,10 @@ while True:
 
     numero_usuario = int(input("Digite um número: "))
     numero_extenso = contagem[numero_usuario]
-    print(numero_extenso)
     
-    if numero_usuario < 0 or numero_usuario > 20:
+    if numero_usuario >= 0 and numero_usuario <= 20:
+        print(f"Você digitou o número {numero_extenso}!") 
+    else:
         break
-print("Digite um número de 0 a 20!") 
+print("Tente novamente: ")
+    
