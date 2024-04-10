@@ -28,6 +28,6 @@ while True:
         
     if continuar == "N":
         break
-print(f"Total da compra: R${total_compra}")
+print(f"Total da compra: R${total_compra:.2f}")
 print(f"{produtos_maiores} produtos custam mais que R$100,00")
 print(f"O produto mais barato é o {produto_mais_barato}")  
