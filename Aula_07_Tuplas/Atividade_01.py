@@ -13,4 +13,3 @@ while True:
     else:
         break
 print("Tente novamente: ")
-    

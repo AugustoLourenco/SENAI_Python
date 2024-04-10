@@ -3,9 +3,17 @@
 
 from random import *
 
+maior = 0
+menor = 0
+minha_lista = []
+
 for elemento in range (1, 6):
 
     numero_aleatorio = randint(0,20)
+    minha_lista.append(numero_aleatorio)
+    
+    maior = max(minha_lista)
+    menor = min(minha_lista)
     print(numero_aleatorio)
     
     tupla_aleatoria = tuple(numero_aleatorio)
