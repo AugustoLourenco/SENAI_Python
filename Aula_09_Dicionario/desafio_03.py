@@ -3,26 +3,34 @@
 # Calcule e acrescente, além da idade, com quantos anos a pessoa vai se aposentar. 
 # Sabendo que ele vai se aposentar após 35 anos de colaboração.
 
-senai = {}
+from datetime import *
+data_atual = date.today()
+ano_atual = data_atual.year
+    
+dicionario = {}
 lista = list() # Podemos declarar lista dessa maneira
 
 while True:
     
-    senai["Nome"] = str(input("Digite o nome do aluno: ")).upper()
-    senai["Média"] = float(input("Digite a média do aluno: "))
-    continuar = input("Deseja adicionar mais alunos? S ou N: ").upper()
+    dicionario["Nome"] = str(input("Digite o nome da pessoa: ")).upper()
+    ano_nascimento = int(input("Digite o ano de nascimento: "))
+    dicionario["Idade"] = ano_atual - ano_nascimento
+    dicionario["CTPS"] = int(input("Digite o numero da CTPS: "))
 
-    if senai["Média"] >= 7:
-        senai["Situação"] = "Aprovado" 
-    else:
-        senai["Situação"] = "Reprovado"
+    if dicionario["CTPS"] != 0:
+        dicionario["Ano de Contratação"] = int(input("Digite o ano de contratação: "))
+        dicionario["Salário"] = float(input("Digite o salário: "))
+        anos_colaboração = ano_atual - dicionario["Ano de Contratação"]
+        dicionario["Idade da aposentadoria"] = dicionario["Idade"] + (35 - anos_colaboração)
+    
+    
+    continuar = input("Deseja cadastrar mais pessoas? S ou N: ").upper()
+    
 
-    lista.append(senai.copy())
+    lista.append(dicionario.copy())
     
     if continuar == "N":
         break
 
-for e in lista: # percorrer cada dicionario
-    for v in e.values(): # exibir cada valor
-        print(v, end=" // ")
-    print(" ")
+print(dicionario)
+print(lista)
