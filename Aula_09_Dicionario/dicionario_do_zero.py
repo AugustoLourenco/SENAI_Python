@@ -6,7 +6,7 @@ brasil = list() # Podemos declarar lista dessa maneira
 for c in range (0, 2):
     estado["uf"] = str(input("Unidade Federativa: "))
     estado["sigla"] = str(input("Sigla do Estado: "))
-    brasil.append(estado.copy)
+    brasil.append(estado.copy())
     
 print(brasil)
 
