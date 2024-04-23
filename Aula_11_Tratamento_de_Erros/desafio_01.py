@@ -3,13 +3,22 @@
 # Escreva um programa que peça ao usuário para digitar dois números e divida o primeiro número pelo segundo. 
 # Certifique-se de lidar com a possibilidade de divisão por zero.
 
-def divideNumeros(numero1, numero2):
-    return numero1 / numero2
+while True:
 
-try:
-    n1 = int(input("Digite um número: "))
-    n2 = int(input("Digite mais um número: "))
-except:
-    print("Coloque apenas valores numericos.")
+    try:
+        n1 = int(input("Digite o primeiro valor: "))
+        n2 = int(input("Digite o segundo valor: "))
+        
+        divisao = n1 / n2
 
-print(f"A divisão de {n1} e {n2} é igual a {divideNumeros(n1,n2)}")
+    except ZeroDivisionError:
+        
+        print("Não existe divisão por zero")
+        
+    except ValueError:
+        
+        print("Digite um valor numérico")
+        
+    else:
+        print(f"A divisão de {n1} por {n2} é igual a {divisao}")
+    break
